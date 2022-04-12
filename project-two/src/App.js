@@ -3,11 +3,15 @@ import './App.css';
 import MyBadge from './components/MyBadge';
 import MyNav from './components/MyNav';
 
+
+
 function App() {
   return (
     <div >
       <MyNav title="Yo!Bookstore"/>
-      <MyBadge text="Badge" variant="danger" />
+      <MyBadge text="Badge" color="danger" />
+     
+      
     </div>
   );
 }

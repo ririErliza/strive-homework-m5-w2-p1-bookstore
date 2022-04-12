@@ -4,7 +4,7 @@ import { Badge } from 'react-bootstrap'
 const MyBadge = (props) => (
 <div>
   
-    <Badge variant={props.variant}>
+    <Badge variant={props.color}>
         {props.text}
     </Badge>
 
