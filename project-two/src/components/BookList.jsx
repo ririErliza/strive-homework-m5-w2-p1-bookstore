@@ -1,18 +1,31 @@
-import { Container, Row } from "react-bootstrap";
+import { useState } from "react";
+import { Container, Row} from "react-bootstrap";
 import books from "../data/Books.json"
 import SingleBook from "./SingleBook";
 
 
-const BookList = () =>(
+const BookList = () =>{
+    const[query, setQuery] = useState("");
+
+   return (
     <Container>
-        <Row>
-            {books.map(book=>(
-            <SingleBook key={book.asin} book={book}/> 
+        <Row className="justify-content-center">
+        <input type="text" placeholder="Search..." className="w-75" 
+        onChange={(e)=>setQuery(e.target.value)}
+        />
+        </Row>
+        
+  
+        <Row className="mt-4">
+            {books
+            .filter((book)=> book.title.toLowerCase().includes(query))
+            .map(book=>(<SingleBook key={book.asin} book={book}/> 
             ))}
         </Row>
     </Container>
-)
+   ) 
 
+}
 
 
 export default BookList

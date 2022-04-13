@@ -1,4 +1,4 @@
-import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Nav} from 'react-bootstrap'
 
 const MyNav = (props) => (
   <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -12,10 +12,7 @@ const MyNav = (props) => (
         <Nav.Link href="#home">About</Nav.Link>
         <Nav.Link href="#home">Browse</Nav.Link>
       </Nav>
-      <Form inline>
-      <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button variant="outline-primary">Search</Button>
-    </Form>
+      
     </Navbar.Collapse>
   </Navbar>
 )
