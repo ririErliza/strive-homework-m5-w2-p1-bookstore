@@ -10,15 +10,14 @@ const BookList = () =>{
    return (
     <Container>
         <Row className="justify-content-center">
-        <input type="text" placeholder="Search..." className="w-75" 
-        onChange={(e)=>setQuery(e.target.value)}
-        />
+            <input type="text" placeholder="Search title..." className="w-75" 
+            onChange={(e)=>setQuery(e.target.value)}
+            />
         </Row>
         
-  
         <Row className="mt-4">
             {books
-            .filter((book)=> book.title.toLowerCase().includes(query))
+            .filter((book)=> book.title.toLowerCase().includes(query.toLowerCase()))
             .map(book=>(<SingleBook key={book.asin} book={book}/> 
             ))}
         </Row>
