@@ -3,14 +3,19 @@ import { Component } from 'react'
 
 
 
+
 class SingleBook extends Component{
+    state = {
+        display: false,
+      }
  
     render(){
-        
-       
         return(
             <Col xs={6} md={3} className="mb-3">
-                <Card className="h-100" key={this.props.book.asin} >
+                <Card
+                key={this.props.book.asin}
+                className={ this.state.display ? "h-100 BorderOn" : "h-100 BorderOff" }
+                onClick={() => this.setState({display: !this.state.display})}>
                    
                     <Card.Img variant="top" src={this.props.book.img} className="h-75"/>
                     <Card.Body>
