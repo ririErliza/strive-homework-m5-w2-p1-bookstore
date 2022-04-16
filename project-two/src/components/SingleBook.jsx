@@ -21,21 +21,7 @@ class SingleBook extends Component{
                     <Card.Body>
                         <Card.Title className="text-truncate">{this.props.book.title}</Card.Title> 
                     </Card.Body>
-                    <Card.Body>
-                            <div data-spy="scroll" data-target="#navbar-example2" data-offset="0">
-                                <h4 id="fat">@fat</h4>
-                                <p>...</p>
-                                <h4 id="mdo">@mdo</h4>
-                                <p>...</p>
-                                <h4 id="one">one</h4>
-                                <p>...</p>
-                                <h4 id="two">two</h4>
-                                <p>...</p>
-                                <h4 id="three">three</h4>
-                                <p>...</p>
-                            </div>
-
-                        </Card.Body>
+                   
                     
                 </Card>
             </Col>
